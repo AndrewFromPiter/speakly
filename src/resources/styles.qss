@@ -1,0 +1,467 @@
+/* ============================================================
+   Speakly - Основные стили приложения
+   ============================================================ */
+
+/* ---------- Общие стили ---------- */
+QMainWindow {
+    background-color: #f0f2f5;
+}
+
+QWidget {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 10pt;
+    color: #2c3e50;
+}
+
+/* ---------- Группы ---------- */
+QGroupBox {
+    font-weight: bold;
+    border: 2px solid #d0d7de;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    background-color: white;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 15px;
+    padding: 0 8px 0 8px;
+    color: #2c3e50;
+    background-color: white;
+}
+
+/* ---------- Кнопки ---------- */
+QPushButton {
+    background-color: #e8ecf1;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+QPushButton:hover {
+    background-color: #d0d7de;
+    border-color: #8b949e;
+}
+
+QPushButton:pressed {
+    background-color: #b8c0c8;
+}
+
+QPushButton:disabled {
+    background-color: #f0f0f0;
+    color: #b0b0b0;
+}
+
+/* ---------- Специальные кнопки ---------- */
+QPushButton#btn_transcribe {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 12px 24px;
+}
+
+QPushButton#btn_transcribe:hover {
+    background-color: #27ae60;
+}
+
+QPushButton#btn_transcribe:disabled {
+    background-color: #a8d5ba;
+    color: #666;
+}
+
+QPushButton#btn_process {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+QPushButton#btn_process:hover {
+    background-color: #2980b9;
+}
+
+QPushButton#btn_process:disabled {
+    background-color: #a8c8e8;
+    color: #666;
+}
+
+/* ---------- Текстовые поля ---------- */
+QTextEdit {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: white;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 10pt;
+    selection-background-color: #3498db;
+    selection-color: white;
+}
+
+QTextEdit:focus {
+    border-color: #3498db;
+}
+
+/* ---------- Поля ввода ---------- */
+QLineEdit {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: white;
+}
+
+QLineEdit:focus {
+    border-color: #3498db;
+}
+
+/* ---------- Выпадающие списки ---------- */
+QComboBox {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: white;
+    min-width: 120px;
+}
+
+QComboBox:hover {
+    border-color: #8b949e;
+}
+
+QComboBox:focus {
+    border-color: #3498db;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: url(down_arrow.png);
+    width: 12px;
+    height: 12px;
+}
+
+/* ---------- Спинбоксы ---------- */
+QSpinBox {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: white;
+    min-width: 80px;
+}
+
+QSpinBox:focus {
+    border-color: #3498db;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 16px;
+    border: none;
+    background-color: #f0f2f5;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #d0d7de;
+}
+
+/* ---------- Прогресс-бары ---------- */
+QProgressBar {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    text-align: center;
+    background-color: white;
+    height: 25px;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #2ecc71,
+        stop: 0.5 #27ae60,
+        stop: 1 #2ecc71);
+    border-radius: 4px;
+}
+
+/* ---------- Вкладки ---------- */
+QTabWidget::pane {
+    border: 2px solid #d0d7de;
+    border-radius: 8px;
+    background-color: white;
+}
+
+QTabBar::tab {
+    padding: 10px 20px;
+    margin-right: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #e8ecf1;
+    border: 1px solid #d0d7de;
+    border-bottom: none;
+    font-weight: 500;
+}
+
+QTabBar::tab:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #d0d7de;
+}
+
+/* ---------- Списки ---------- */
+QListWidget {
+    border: 2px solid #d0d7de;
+    border-radius: 6px;
+    padding: 4px;
+    background-color: white;
+}
+
+QListWidget::item {
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+QListWidget::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+QListWidget::item:hover:!selected {
+    background-color: #e8ecf1;
+}
+
+/* ---------- Метки ---------- */
+QLabel {
+    color: #2c3e50;
+}
+
+QLabel#file_label {
+    background-color: #f8f9fa;
+    border: 2px dashed #d0d7de;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #6c7a8a;
+}
+
+QLabel#file_label[has_file="true"] {
+    border: 2px solid #2ecc71;
+    color: #2c3e50;
+}
+
+QLabel#status_label {
+    font-weight: bold;
+    color: #6c7a8a;
+}
+
+QLabel#status_label[status="success"] {
+    color: #2ecc71;
+}
+
+QLabel#status_label[status="error"] {
+    color: #e74c3c;
+}
+
+QLabel#status_label[status="warning"] {
+    color: #f39c12;
+}
+
+/* ---------- Checkbox ---------- */
+QCheckBox {
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid #d0d7de;
+    background-color: white;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+    image: url(check_mark.png);
+}
+
+QCheckBox::indicator:hover {
+    border-color: #8b949e;
+}
+
+/* ---------- ScrollBar ---------- */
+QScrollBar:vertical {
+    background-color: #f0f2f5;
+    border: none;
+    width: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #c0c8d0;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #a0a8b0;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #f0f2f5;
+    border: none;
+    height: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #c0c8d0;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #a0a8b0;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ---------- Tooltip ---------- */
+QToolTip {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 9pt;
+}
+
+/* ---------- Menu ---------- */
+QMenuBar {
+    background-color: white;
+    border-bottom: 1px solid #d0d7de;
+}
+
+QMenuBar::item {
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #e8ecf1;
+}
+
+QMenu {
+    background-color: white;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+/* ---------- Message Box ---------- */
+QMessageBox {
+    background-color: white;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    padding: 8px 16px;
+}
+
+/* ---------- Status Bar ---------- */
+QStatusBar {
+    background-color: #f8f9fa;
+    border-top: 1px solid #d0d7de;
+    padding: 4px 10px;
+}
+
+QStatusBar::item {
+    border: none;
+}
+
+/* ---------- Разделители ---------- */
+QSplitter::handle {
+    background-color: #d0d7de;
+    width: 4px;
+}
+
+QSplitter::handle:hover {
+    background-color: #8b949e;
+}
+
+/* ---------- Стили для темной темы (опционально) ---------- */
+/* 
+   Чтобы включить темную тему, раскомментируйте:
+   QMainWindow { background-color: #1a1a2e; }
+   QWidget { color: #e0e0e0; }
+   QGroupBox { background-color: #16213e; border-color: #2a3a5e; }
+   и т.д.
+*/
+
+/* ============================================================
+   АНИМАЦИИ (через QPropertyAnimation в коде)
+   ============================================================ */
+
+/* 
+   Анимации реализуются в коде Python через QPropertyAnimation.
+   Вот примеры CSS-классов для анимации:
+*/
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+QPushButton#btn_transcribe:processing {
+    animation: pulse 1s infinite;
+}
+
+/* ============================================================
+   MEDIA QUERIES (адаптивность)
+   ============================================================ */
+
+/* Для маленьких экранов */
+@media (max-width: 800px) {
+    QWidget {
+        font-size: 9pt;
+    }
+    QPushButton {
+        padding: 6px 12px;
+    }
+    QTabBar::tab {
+        padding: 6px 12px;
+        font-size: 9pt;
+    }
+}
+
+/* Для больших экранов */
+@media (min-width: 1440px) {
+    QWidget {
+        font-size: 11pt;
+    }
+    QPushButton {
+        padding: 10px 20px;
+    }
+}
