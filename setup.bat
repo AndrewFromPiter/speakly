@@ -8,7 +8,7 @@ echo ============================================================
 echo.
 
 set PROJECT_DIR=%CD%
-set REPO_URL=https://github.com/your-username/speakly.git   :: ЗАМЕНИ НА СВОЙ РЕПО!
+set REPO_URL=https://github.com/AndrewFromPiter/speakly   :: ЗАМЕНИ НА СВОЙ РЕПО!
 
 :: ============================================================
 :: 1. Проверка и установка winget (уже есть в Win11)
